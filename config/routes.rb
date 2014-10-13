@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   root "shouts#index"
 
+  resources :shouts, only: [:create, :index]
+
 end

@@ -1,5 +1,10 @@
 <h1>Shouts</h1>
 
+<%= form_for @shout do |form| %>
+  <%= form.text_field :body %>
+  <%= form.submit "Shout!" %>
+<% end %>
+
 <ul>
   <% @shouts.each do |shout| %>
     <li><%= shout.body %></li>
