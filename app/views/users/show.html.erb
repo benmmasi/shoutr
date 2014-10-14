@@ -1,0 +1,9 @@
+<h2>Viewing <%= @user.email %>'s profile page</h2>
+
+<%= render "follow_button", user: @user %>
+
+<p><%= @user.email %> is following:</p>
+
+<ul>
+  <%= render @followed_users %>
+</ul>
