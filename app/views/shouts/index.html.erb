@@ -1,12 +1,15 @@
-<h1>Shouts</h1>
+<h2>Shouts</h2>
 
 <%= form_for @shout do |form| %>
   <%= form.text_field :body %>
-  <%= form.submit "Shout!" %>
+<%= form.submit "Shout!" %>
 <% end %>
 
-<ul>
-  <% @shouts.each do |shout| %>
-    <li><%= shout.body %></li>
+<div>
+  <h3>Your Feed</h3>
+  <ul>
+    <% @shouts.each do |shout| %>
+      <li><%= shout.body %></li>
   <% end %>
-</ul>
+  </ul>
+</div>
