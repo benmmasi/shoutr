@@ -16,11 +16,13 @@
   <% if signed_in? %>
     <p>Currently signed in as <%= current_user.email %></p>
     <%= button_to "Sign Out", session_path, method: :delete %>
+    <%= link_to "Followers", followers_path %>
   <% else %>
     <%= link_to "Sign in", new_session_path %>
     <%= link_to "Sign up", new_user_path %>
   <% end %>
 </header>
+
 
 <%= yield %>
 
