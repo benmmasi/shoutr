@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resource :following_relationship, only: [:create, :destroy]
   end
 
+  resources :text_subjects, only: [:create]
+
   root "shouts#index"
 
-  resources :shouts, only: [:create, :index]
+  resources :shouts, only: [:index]
 end
