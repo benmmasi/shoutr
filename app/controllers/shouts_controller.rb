@@ -1,6 +1,7 @@
 class ShoutsController < ApplicationController
   before_action :require_login
   def index
+    @image_subject = ImageSubject.new
     @text_subject = TextSubject.new
     @timeline = current_user.timeline
     @users_i_follow = current_user.followed_users
