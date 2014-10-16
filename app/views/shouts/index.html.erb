@@ -11,21 +11,11 @@
   <%= form.submit "Image Shout!" %>
 <% end %>
 
-<h4>People I do not follow</h4>
-<ul>
-  <% @users_i_do_not_follow.each do |user| %>
-    <li>
-    <%= user.email %>
-    <%- button_to "Follow", [user, :following_relationship] %>
-    </li>
-  <% end %>
-</ul>
-
 <h4>People I follow</h4>
 <ul>
   <% @users_i_follow.each do |user| %>
     <li>
-    <%= user.email %>
+    <%= user.username %>
     </li>
   <% end %>
 </ul>

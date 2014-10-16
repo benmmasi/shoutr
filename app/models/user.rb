@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: true
+  validates :username, presence: true, uniqueness: true
 
   has_many :followed_user_relationships,
     foreign_key: :follower_id,
@@ -25,5 +26,10 @@ class User < ActiveRecord::Base
   def timeline
     Shout.where(user_id: followed_user_ids + [id])
       .order(created_at: :desc).limit(20)
+  end
+
+  def to_param
+    username
+   
   end
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create, :index, :show] do
+  resources :users, only: [:new, :create, :index] do
     resource :following_relationship, only: [:create, :destroy]
   end
 
@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   resources :shouts, only: [:index]
   resources :followers, only: [:index]
   resource :search, only: [:show]
+  
+  get "/:username", to: "users#show", as: :user
+
 end

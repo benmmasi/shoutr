@@ -15,7 +15,7 @@
   
 <header class="session">
   <% if signed_in? %>
-    <p>Currently signed in as <%= current_user.email %></p>
+    <p>Currently signed in as <%= current_user.username %></p>
     <%= button_to "Sign Out", session_path, method: :delete %>
     <%= link_to "Followers", followers_path %>
     <%= form_tag :search, method: :get do %>

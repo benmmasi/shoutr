@@ -1,8 +1,8 @@
-<h2>Viewing <%= @user.email %>'s profile page</h2>
+<h2>Viewing <%= @user.username %>'s profile page</h2>
 
 <%= render "follow_button", user: @user %>
 
-<p><%= @user.email %> is following:</p>
+<p><%= @user.username %> is following:</p>
 
 <ul>
   <%= render @followed_users %>
