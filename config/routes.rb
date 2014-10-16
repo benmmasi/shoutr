@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :image_subjects, only: [:create]
   resources :shouts, only: [:index]
   resources :followers, only: [:index]
+  resource :search, only: [:show]
 end
