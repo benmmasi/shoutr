@@ -7,7 +7,6 @@ class TextSubjectsController < ApplicationController
 
     redirect_to shouts_path
   end
-  
 
   private
 
